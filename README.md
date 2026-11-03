@@ -1,4 +1,4 @@
-# 🗄️ Tugas Intermediate Data Analytics (Part 1): Eksplorasi Perilaku Konsumen SuryaMart Menggunakan SQL
+# 🗄️ Tugas Intermediate Data Analytics (Part 1) : Eksplorasi Perilaku Konsumen SuryaMart Menggunakan SQL
 
 ![Google BigQuery](https://img.shields.io/badge/Database-Google_BigQuery-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
 ![SQL](https://img.shields.io/badge/Language-Standard_SQL-CC2927?style=for-the-badge&logo=postgresql&logoColor=white)
