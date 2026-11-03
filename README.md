@@ -1,4 +1,4 @@
-# 🗄️ Tugas Intermediate Data Analytics (Part 1) : Eksplorasi Perilaku Konsumen SuryaMart Menggunakan SQL
+# Tugas Intermediate Data Analytics (Part 1) : Eksplorasi Perilaku Konsumen SuryaMart Menggunakan SQL
 
 ![Google BigQuery](https://img.shields.io/badge/Database-Google_BigQuery-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
 ![SQL](https://img.shields.io/badge/Language-Standard_SQL-CC2927?style=for-the-badge&logo=postgresql&logoColor=white)
@@ -9,7 +9,7 @@
 
 ---
 
-## 📌 Latar Belakang & Konteks Bisnis
+## Latar Belakang & Konteks Bisnis
 Proyek ini merupakan tugas studi kasus *Intermediate Part 1* pada **Harisenin Data Analytics Bootcamp**. Dalam skenario bisnis ini, **SuryaMart** merupakan perusahaan retail yang sedang berkembang pesat dan memiliki ratusan data transaksi dari berbagai kategori produk seperti makanan, perlengkapan rumah tangga, elektronik, hingga barang mewah.
 
 Untuk mendukung strategi bisnis, tim *marketing* SuryaMart ingin memanfaatkan data pelanggan guna memahami pola perilaku konsumen, tren pembelian, serta mengevaluasi efektivitas kampanye digital dan program loyalitas pelanggan. Sebagai *Junior Data Analyst*, saya ditugaskan untuk mengekstrak informasi penting dari database perusahaan menggunakan **SQL**, menyaring data, dan merumuskan rekomendasi strategi bisnis berbasis data.
@@ -23,7 +23,7 @@ Untuk mendukung strategi bisnis, tim *marketing* SuryaMart ingin memanfaatkan da
 
 ---
 
-## 🔄 Alur Kerja Proyek (Project Workflow)
+## Alur Kerja Proyek (Project Workflow)
 1. **Database & Schema Setup**: Mengunggah dataset mentah (`Data SuryaHub.csv` — 500 baris transaksi, 15 atribut kolom) ke dalam *dataset* `suryamart_d` di Google BigQuery.
 2. **Data Exploration & SQL Querying**: Menulis dan menjalankan 7 *query* SQL spesifik untuk menjawab pertanyaan bisnis utama manajemen SuryaMart.
 3. **Insight Extraction & Business Strategy**: Menerjemahkan angka hasil agregasi SQL menjadi *key takeaways*, *business insights*, dan rekomendasi strategi yang dapat dieksekusi (*actionable recommendations*).
@@ -37,7 +37,7 @@ Untuk mendukung strategi bisnis, tim *marketing* SuryaMart ingin memanfaatkan da
 
 ---
 
-## 💻 Eksekusi Query SQL & Hasil Eksplorasi Data
+## Eksekusi Query SQL & Hasil Eksplorasi Data
 
 Berikut adalah dokumentasi pengerjaan 7 pertanyaan bisnis menggunakan SQL beserta cuplikan tabel hasil eksekusinya di Google BigQuery:
 
@@ -176,14 +176,14 @@ Berikut adalah dokumentasi pengerjaan 7 pertanyaan bisnis menggunakan SQL besert
 
 ---
 
-## 💡 Key Takeaways Utama
+## Key Takeaways Utama
 1. **Pola Belanja & Penggerak Frekuensi Ritel (*Basket Size & Purchase Frequency Drivers*)**: Pelanggan bertipe *Planned* dan pengguna kanal *Mixed (Omnichannel)* menghasilkan nilai keranjang belanja (*basket size*) tertinggi, sementara toko fisik (*In-Store*) mendorong frekuensi kunjungan tertinggi.
 2. **Potensi Pasar Wilayah Luar Ibu Kota (*Regional Market Potential*)**: Makassar menempati peringkat pertama dalam jumlah transaksi (95 transaksi) dan akumulasi frekuensi pembelian (658 kali), membuktikan tingginya potensi pasar di luar Pulau Jawa.
 3. **Paradoks Program Loyalitas & Retensi (*Loyalty Program & Retention Paradox*)**: Anggota *Loyalty Program* mencatatkan rata-rata belanja lebih rendah dibanding non-anggota, dan banyak *high-ticket spenders* memiliki `Brand_Loyalty = 1`. Di sisi lain, pelanggan dengan `Brand_Loyalty = 5` tidak bergantung pada diskon (56,6% *False*).
 
 ---
 
-## 📊 Matriks Rangkuman Insight & Rekomendasi Strategi
+## Matriks Rangkuman Insight & Rekomendasi Strategi
 
 | No | Business Question | Temuan / Jawaban | Insight Bisnis | Rekomendasi Strategi |
 | :-: | :--- | :--- | :--- | :--- |
