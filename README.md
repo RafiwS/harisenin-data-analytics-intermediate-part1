@@ -102,15 +102,12 @@ Berikut adalah dokumentasi pengerjaan 7 pertanyaan bisnis menggunakan SQL besert
 * **Pertanyaan Bisnis**: *Kelompokkan pelanggan berdasarkan Purchase_Intent. Di antara kategori yang ada (Impulsive, Need-based, Planned, Wants-based), siapa yang cenderung belanja lebih mahal dan lebih sering? Jelaskan temuanmu.*
 * **Query SQL**:
   ```sql
-  SELECT 
-      Purchase_Intent, 
-      COUNT(Customer_ID) AS Jumlah_Pelanggan,
-      ROUND(AVG(Purchase_Amount_Rp), 2) AS Rata_Rata_Pembelian_Rp,
-      SUM(Purchase_Amount_Rp) AS Total_Pembelian_Rp,
-      ROUND(AVG(Frequency_of_Purchase), 2) AS Rata_Rata_Frekuensi
+  SELECT Purchase_Intent,
+         AVG(Purchase_Amount_Rp) AS avg_amount,
+         AVG(Frequency_of_Purchase) AS avg_frequency
   FROM suryamart_db.suryahub
   GROUP BY Purchase_Intent
-  ORDER BY Rata_Rata_Pembelian_Rp DESC;
+  ORDER BY avg_frequency DESC;
   ```
 * **Hasil Eksekusi Query**:
   
@@ -124,15 +121,11 @@ Berikut adalah dokumentasi pengerjaan 7 pertanyaan bisnis menggunakan SQL besert
 * **Pertanyaan Bisnis**: *Apakah ada perbedaan pola pembelian antara channel pembelian (Online, Mixed, In-Store)? Bandingkan berdasarkan Purchase_Amount_Rp dan Frequency_of_Purchase.*
 * **Query SQL**:
   ```sql
-  SELECT 
-      Purchase_Channel,
-      COUNT(Customer_ID) AS Jumlah_Transaksi,
-      ROUND(AVG(Purchase_Amount_Rp), 2) AS Rata_Rata_Pembelian_Rp,
-      SUM(Purchase_Amount_Rp) AS Total_Pembelian_Rp,
-      ROUND(AVG(Frequency_of_Purchase), 2) AS Rata_Rata_Frekuensi
+  SELECT Purchase_Channel,
+  AVG(Purchase_Amount_Rp) AS avg_amount,
+  AVG(Frequency_of_Purchase) AS avg_frequency
   FROM suryamart_db.suryahub
-  GROUP BY Purchase_Channel
-  ORDER BY Rata_Rata_Pembelian_Rp DESC;
+  GROUP BY Purchase_Channel;
   ```
 * **Hasil Eksekusi Query**:
 
@@ -146,11 +139,9 @@ Berikut adalah dokumentasi pengerjaan 7 pertanyaan bisnis menggunakan SQL besert
 * **Pertanyaan Bisnis**: *Apakah anggota program loyalitas (Customer_Loyalty_Program_Member = TRUE) memiliki rata-rata pembelian produk yang lebih tinggi atau lebih sering dibanding non-anggota?*
 * **Query SQL**:
   ```sql
-  SELECT 
-      Customer_Loyalty_Program_Member,
-      COUNT(Customer_ID) AS Jumlah_Pelanggan,
-      ROUND(AVG(Purchase_Amount_Rp), 2) AS Rata_Rata_Pembelian_Rp,
-      ROUND(AVG(Frequency_of_Purchase), 2) AS Rata_Rata_Frekuensi
+  SELECT Customer_Loyalty_Program_Member,
+     AVG(Purchase_Amount_Rp) AS avg_amount,
+     AVG(Frequency_of_Purchase) AS avg_frequency
   FROM suryamart_db.suryahub
   GROUP BY Customer_Loyalty_Program_Member
   ORDER BY Customer_Loyalty_Program_Member DESC;
@@ -167,17 +158,15 @@ Berikut adalah dokumentasi pengerjaan 7 pertanyaan bisnis menggunakan SQL besert
 * **Pertanyaan Bisnis**: *Siapa 10 pelanggan dengan total pembelian (Purchase_Amount_Rp) tertinggi? Apa ciri-ciri mereka (lokasi, channel, brand loyalty)?*
 * **Query SQL**:
   ```sql
-  SELECT 
-      Customer_ID, 
-      Purchase_Amount_Rp, 
-      Location, 
-      Purchase_Channel, 
-      Brand_Loyalty,
-      Purchase_Category,
-      Frequency_of_Purchase
+   SELECT Customer_ID,
+     SUM(Purchase_Amount_Rp) AS Total_Spent,
+     MAX(Location) AS Location,
+     MAX(Purchase_Channel) AS Channel,
+     MAX(Brand_Loyalty) AS Brand_Loyalty
   FROM suryamart_db.suryahub
-  ORDER BY Purchase_Amount_Rp DESC
-  LIMIT 10;
+  GROUP BY Customer_ID
+  ORDER BY Customer_ID DESC
+  LIMIT 10
   ```
 * **Hasil Eksekusi Query**:
 
