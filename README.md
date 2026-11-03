@@ -29,9 +29,9 @@ Untuk mendukung strategi bisnis, tim *marketing* SuryaMart ingin memanfaatkan da
 3. **Insight Extraction & Business Strategy**: Menerjemahkan angka hasil agregasi SQL menjadi *key takeaways*, *business insights*, dan rekomendasi strategi yang dapat dieksekusi (*actionable recommendations*).
 
 ### 📸 Dokumentasi Setup Tabel & Skema di Google BigQuery
-> *Tampilan struktur skema tabel `suryamart_d.suryahub` pada Google BigQuery:*
+> *Tampilan struktur skema tabel `suryamart_db.suryahub` pada Google BigQuery:*
 
-<!-- Hapus baris di bawah ini lalu tekan Ctrl+V untuk paste screenshot halaman Schema BigQuery kamu -->
+
 <img width="1741" height="612" alt="image" src="https://github.com/user-attachments/assets/41866827-2f7d-4510-9376-c1263ca3fe7c" />
 
 
