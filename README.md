@@ -5,7 +5,7 @@
 ![Google Sheets](https://img.shields.io/badge/Reporting-Google_Sheets_%7C_Excel-34A853?style=for-the-badge&logo=google-sheets&logoColor=white)
 ![Bootcamp](https://img.shields.io/badge/Program-Harisenin_Data_Analytics_Bootcamp-blue?style=for-the-badge)
 
-> **Bootcamp Project Assignment (Intermediate 1 — Crack the Code of Meaningful Insights)** — Mengekstrak, memfilter, dan mengagregasi 500 data transaksi pelanggan menggunakan **SQL pada Google BigQuery** untuk mengevaluasi efektivitas program loyalitas, pola kanal belanja, serta strategi pemasaran retail **SuryaMart**.
+> **Bootcamp Project Assignment (Intermediate 1 - Crack the Code of Meaningful Insights)** - Mengekstrak, memfilter, dan mengagregasi 500 data transaksi pelanggan menggunakan **SQL pada Google BigQuery** untuk mengevaluasi efektivitas program loyalitas, pola kanal belanja, serta strategi pemasaran retail **SuryaMart**.
 
 ---
 
